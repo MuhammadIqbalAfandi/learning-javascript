@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - Standard Library</title>
+  </head>
+  <body>
+    <script>
+      // With new keyword
+      console.log('===== With new keyword =====')
+      const number = new Number(26)
+      console.log(number)
+      console.log(number.toLocaleString('id-ID'))
+
+      // Without new keyword
+      console.log('===== Without new keyword =====')
+      const number2 = Number(1998)
+      console.log(number2)
+
+      // Common number keyword
+      console.log('===== Modern number keyword =====')
+      let moneyId = 6750000
+
+      // Static method
+      console.log('===== Static method =====')
+      console.log(Number.parseInt(moneyId))
+      console.log(Number.isNaN(moneyId))
+
+      // Static property
+      console.log('===== Static property =====')
+      console.log(Number.MAX_VALUE)
+      console.log(Number.MIN_VALUE)
+
+      // Instance method
+      console.log('===== Instance method =====')
+      console.log(moneyId.toLocaleString('id-ID'))
+    </script>
+  </body>
+</html>

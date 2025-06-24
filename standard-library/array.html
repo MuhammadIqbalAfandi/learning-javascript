@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - Standard Library</title>
+  </head>
+  <body>
+    <script>
+      // With new keyword
+      console.log('===== With new keyword =====')
+      const array = new Array('Vi', 'Yu')
+      console.log(array[0])
+      console.log(array[1])
+      console.log(array)
+
+      // Without new keyword
+      console.log('===== Without new keyword =====')
+      const array2 = Array('Vi', 'Mi')
+      console.log(array2)
+
+      // Common array keyword
+      console.log('===== Modern array keyword =====')
+      const array3 = ['Vi', 'Mi']
+      console.log(array3)
+
+      // Static method
+      console.log('===== Static method =====')
+      console.log(Array.from('Vi You'))
+      console.log(Array.from([1, 2, 3], (x) => x + x))
+
+      // Static property
+      console.log('===== Static property =====')
+
+      // Instance method
+      console.log('===== Instance method =====')
+      const words = ['spray', 'elite', 'exuberant', 'destruction', 'present']
+
+      const result = words.filter((word) => word.length > 6)
+      console.log(result)
+
+      const result2 = words.filter((word) => word.includes('a'))
+      console.log(result2)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module</title>
+</head>
+<body>
+
+<script type="module">
+    import SomeOne, { sayGoodBye, sayHello, version } from "./library.js";
+
+    const person = new SomeOne('Cin')
+    person.sayHello()
+
+    sayHello('Vivi')
+    sayGoodBye('Vivi')
+    console.log(version)
+</script>
+</body>
+</html>

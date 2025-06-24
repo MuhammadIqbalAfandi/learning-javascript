@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript-OOP-ES6</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        sayHello(name) {
+          console.info(`Hi ${name}, my name is employee ${this.name}`)
+        }
+      }
+
+      class Manager extends Person {
+        sayHello(name) {
+          console.info(`Hi ${name}, my name is manager ${this.name}`)
+        }
+      }
+
+      const vi = new Person()
+      vi.name = 'Vi You'
+      vi.sayHello('Mi You')
+      console.log(vi)
+
+      const mi = new Manager()
+      mi.name = 'Mi You'
+      mi.sayHello('Vi You')
+      console.log(mi)
+    </script>
+  </body>
+</html>

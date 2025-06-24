@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - Standard Library</title>
+  </head>
+  <body>
+    <script>
+      // With new keyword
+      console.log('===== With new keyword =====')
+      const object = new Object(26)
+      const object2 = new Object('Vi')
+      console.log(object)
+      console.log(object2)
+
+      // Without new keyword
+      console.log('===== Without new keyword =====')
+      const object3 = Object(26)
+      console.log(object3)
+
+      // Common array keyword
+      console.log('===== Modern array keyword =====')
+      const person = {
+        firstName: 'Vi',
+        lastName: 'To',
+      }
+
+      console.log(person)
+      console.log(person.firstName)
+      console.log(person.lastName)
+
+      // Static method
+      console.log('===== Static method =====')
+      Object.freeze(person)
+      person.firstName = 'Mi'
+      delete person.lastName
+      console.log(person)
+
+      // Static property
+      console.log('===== Static property =====')
+
+      // Instance method
+      console.log('===== Instance method =====')
+    </script>
+  </body>
+</html>

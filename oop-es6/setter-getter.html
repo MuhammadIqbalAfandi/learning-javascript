@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript-OOP-ES6</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(name, age) {
+          this._name = name
+          this._age = age
+        }
+
+        set name(newName) {
+          this._name = newName
+        }
+
+        get name() {
+          return this._name
+        }
+
+        set age(newAge) {
+          this._age = newAge
+        }
+
+        get age() {
+          return this._age
+        }
+      }
+
+      const vi = new Person('Vi', '21')
+      console.info(vi.name)
+      console.info(vi.age)
+
+      vi.name = 'Mi'
+      vi.age = '22'
+
+      console.info(vi.name)
+      console.info(vi.age)
+    </script>
+  </body>
+</html>

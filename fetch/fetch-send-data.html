@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch</title>
+</head>
+<body>
+
+<script>
+  const auth = {
+    username: 'Vi',
+    password: '123456'
+  }
+
+  const response = fetch('http://localhost:300/api/forward', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify(auth)
+  })
+
+  response
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(error => console.log(error))
+</script>
+</body>
+</html>

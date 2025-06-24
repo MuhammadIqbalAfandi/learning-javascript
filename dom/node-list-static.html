@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Object Model</title>
+</head>
+<body>
+<p class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, velit.</p>
+<p class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, velit.</p>
+
+<script>
+    const liveList = document.querySelectorAll('.item')
+    console.log(liveList)
+
+    const newDiv = document.createElement('p')
+    newDiv.className = 'item'
+    document.body.appendChild(newDiv)
+
+    console.log(liveList)
+</script>
+</body>
+</html>

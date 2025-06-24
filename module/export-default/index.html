@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module</title>
+</head>
+<body>
+
+<script type="module">
+  // import Greeting from './Library.js'
+  import { default as Greeting } from './Library.js'
+
+  const greeting = new Greeting('Vivi')
+  greeting.sayHello();
+</script>
+</body>
+</html>

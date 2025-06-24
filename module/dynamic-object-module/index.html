@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module</title>
+</head>
+<body>
+
+<script type="module">
+  import('./Math.js')
+    .then(math => {
+      console.log(math.add(5,3))
+      console.log(math.multiply(5, 3))
+    })
+  .catch(error => {
+    console.error('Error loading module', error)
+  })
+</script>
+</body>
+</html>

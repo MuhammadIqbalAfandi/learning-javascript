@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript-OOP</title>
+  </head>
+  <body>
+    <script>
+      function Person(firstName, lastName) {
+        this.firstName = firstName
+        this.lastName = lastName
+        this.sayHello = function (name) {
+          console.info(`Hello ${name}, my name is ${this.firstName}`)
+        }
+      }
+
+      const vi = new Person()
+      vi.firstName = 'vi'
+      vi.lastName = 'le'
+      vi.sayHello('mi you')
+
+      const mi = new Person('mi', 'you')
+
+      console.log(vi)
+      console.log(mi)
+    </script>
+  </body>
+</html>

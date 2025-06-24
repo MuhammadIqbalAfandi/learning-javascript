@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax</title>
+  </head>
+  <body>
+    <form>
+      <!--<input type="file" name="file" id="file" />-->
+      <input type="file" multiple name="file" id="file" />
+      <button type="submit" id="btn-upload">Upload</button>
+    </form>
+
+    <script>
+      function upload(event) {
+        event.preventDefault();
+
+        const formData = new FormData()
+
+        const files = document.getElementById('file').files
+
+        // const firstFile = files.item(0)
+        // formData.append('file', firstFile)
+
+        for (let i = 0; i < files.length; i++) {
+          formData.append('file', files[i])
+        }
+
+        const xhr = new XMLHttpRequest()
+        xhr.open('POST', 'http://localhost:300/api/uploads')
+        xhr.onload = function () {
+          console.log(JSON.parse(xhr.responseText))
+        }
+        xhr.send(formData)
+      }
+
+      document.getElementById('btn-upload').onclick = upload
+    </script>
+  </body>
+</html>

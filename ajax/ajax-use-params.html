@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax</title>
+  </head>
+  <body>
+    <script>
+      const urlParams = new URLSearchParams()
+      urlParams.append('search', 'vi mi')
+      urlParams.append('filter', 'vi mi')
+
+      const xhr = new XMLHttpRequest()
+      xhr.open('POST', `http://localhost:300/api/forward?${urlParams}`)
+      xhr.onload = function () {
+        console.log(JSON.parse(this.responseText))
+      }
+      xhr.send()
+    </script>
+  </body>
+</html>

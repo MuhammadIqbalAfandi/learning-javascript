@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript-OOP-ES6</title>
+  </head>
+  <body>
+    <script>
+      class Employee {}
+
+      class Manager extends Employee {}
+
+      const vi = new Employee()
+      const mi = new Manager()
+
+      console.info(vi instanceof Employee)
+      console.info(mi instanceof Manager)
+      console.info(mi instanceof Employee)
+    </script>
+  </body>
+</html>
